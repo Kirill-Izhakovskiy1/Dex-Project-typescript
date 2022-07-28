@@ -27,9 +27,9 @@ import { useSelector } from "react-redux";
 
 function App() {
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   navigate("/signin")
-  // }, [])
+  useEffect(() => {
+    navigate("/signin")
+  }, [])
   let auth = useSelector((state) => state.auth.token);
   console.log(store.getState().auth.token);
   console.log(Cookies.get("token"), "cookies");
